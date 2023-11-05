@@ -12,13 +12,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = require("mongoose");
 function connection() {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            yield (0, mongoose_1.connect)('mongodb://santiago:root@localhost/nextshop?authSource=admin');
-            console.log('DB connected to database');
-        }
-        catch (err) {
-            console.log(err);
-        }
+        yield (0, mongoose_1.connect)('mongodb://santiago:root@localhost/nextshop?authSource=admin');
     });
 }
-connection();
+connection()
+    .then(() => {
+    console.log('DB is connected');
+})
+    .catch((err) => {
+    console.log(err);
+});

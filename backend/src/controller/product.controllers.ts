@@ -2,7 +2,7 @@ import { type Request, type Response } from 'express'
 import Product from '../models/Product'
 
 export const getProducts = async (
-  req: Request,
+  _req: Request,
   res: Response
 ): Promise<void> => {
   try {

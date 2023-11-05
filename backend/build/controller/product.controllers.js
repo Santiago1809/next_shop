@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getProducts = void 0;
 const Product_1 = __importDefault(require("../models/Product"));
-const getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const getProducts = (_req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield Product_1.default.findByIdAndUpdate('654708d0dd2603e225734d2f', {
             name: 'Redmi Note 10'
