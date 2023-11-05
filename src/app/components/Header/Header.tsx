@@ -2,8 +2,8 @@
 import { useState } from "react";
 import "./header.css";
 export default function Header() {
-  const [showMenu, setShowMenu] = useState(false);
-  const toggle = () => {
+  const [showMenu, setShowMenu]:[boolean, (arg0: boolean) => void] = useState(false);
+  const toggle:() => void = () => {
     setShowMenu(!showMenu);
   };
   return (
