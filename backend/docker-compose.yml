@@ -1,11 +1,14 @@
 version: '3'
 services:
-  monguito:
-    image: mongo:latest
+  nextshop:
+    image: postgres:15.2
     restart: unless-stopped
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=santiago
-      - MONGO_INITDB_ROOT_PASSWORD=root
+      - POSTGRES_USER=santiago
+      - POSTGRES_PASSWORD=1809
+      - POSTGRES_DB=nextshop
     ports:
-      - "27017:27017"
-
+      - "5432:5432"
+    expose:
+      - 5432
+    command: -p 5432

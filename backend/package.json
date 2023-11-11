@@ -3,27 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "tsc": "tsc",
-    "dev": "node --watch ./build/index.js"
+    "dev": "node --watch src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/morgan": "1.9.7",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "eslint": "^8.53.0",
-    "eslint-config-standard-with-typescript": "^39.1.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-n": "^16.2.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "typescript": "^5.2.2"
+    "bcrypt": "5.1.1",
+    "jsonwebtoken": "9.0.2",
+    "prisma": "^5.5.2"
   },
   "dependencies": {
+    "@prisma/client": "^5.5.2",
     "cors": "2.8.5",
+    "dotenv": "16.3.1",
     "express": "4.18.2",
-    "mongoose": "8.0.0",
+    "mongod": "2.0.0",
     "morgan": "1.10.0"
   }
 }
