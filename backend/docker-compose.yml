@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nextshop:
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=santiago
+      - POSTGRES_PASSWORD=1809
+      - POSTGRES_DB=nextshop
+    ports:
+      - "5432:5432"
+    expose:
+      - 5432
+    command: -p 5432
